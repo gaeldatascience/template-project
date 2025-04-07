@@ -1,0 +1,33 @@
+[project]
+name = "mon-projet-ds"
+version = "0.1.0"
+description = "Template de projet data science"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "ipykernel",
+    "black",
+    "ruff"
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+exclude = '''
+/(
+  \.venv
+  | \.git
+  | __pycache__
+  | \.ipynb_checkpoints
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "B", "I"]  # E = erreurs, F = flakes, B = bugbear, I = isort
+fix = true
+
+[tool.ruff.lint]
+ignore = ["E501"]  # Ignorer les lignes trop longues
