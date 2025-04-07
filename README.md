@@ -17,4 +17,6 @@ gh repo create your-project-name --template gaeldatascience/template-project
 cd your-project-name
 uv venv
 uv pip install --requirements pyproject.toml
+# Or run
+make setup
 ```
